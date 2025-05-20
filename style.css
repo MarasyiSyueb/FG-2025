@@ -89,7 +89,7 @@
 
     .box-timer {
       background-color: white;
-      opacity: 0.8;
+      opacity: 0.5;
       padding: 10px 20px;
       font-size: 1.5rem;
       text-align: center;
@@ -139,7 +139,6 @@
     .botsecinput{
       width: 40vw;
       height: 100vh;
-      background-color: red;
     }
 
     @media (orientation:portrait) {
