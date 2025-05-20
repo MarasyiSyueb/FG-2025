@@ -84,3 +84,40 @@
         window.open(url, '_blank');
     }
 </script>
+<script>
+    const tanggaltarget = new Date("2025-06-01T08:30:00").getTime();
+
+    function calculateCountdown() {
+        const now = new Date().getTime();
+        const diff = tanggaltarget - now;
+        const totalSeconds = Math.floor(diff / 1000);
+        const hari = Math.floor(totalSeconds / (3600 * 24));
+        const jam = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+        const menit = Math.floor((totalSeconds % 3600) / 60);
+        const detik = totalSeconds % 60;
+
+        return {hari,jam,menit,detik};
+    }
+
+    function animateCountUp(id, endValue, duration = 300) {
+        const el = document.getElementById(id);
+        let start = 0;
+        const stepTime = Math.max(Math.floor(duration / endValue), 10);
+
+        const timer = setInterval(() => {
+            start++;
+            el.textContent = start;
+            if (start >= endValue) clearInterval(timer);
+        }, stepTime);
+    }
+
+    function startCountdown(){
+        const {hari, jam, menit, detik} = calculateCountdown();
+        animateCountUp("days", hari);
+        animateCountUp("hours", jam);
+        animateCountUp("minutes", menit);
+        animateCountUp("seconds", detik);
+    }
+
+    window.onload = startCountdown;
+</script>
