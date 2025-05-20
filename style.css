@@ -171,9 +171,10 @@
           gap: 2vh;
         }
         .buttons button{
-          width: 30vw;
+          width: 35vw;
           height: 6vh;
           font-size: 40px;
+          border-radius: 5vw;
           
         }
         .box2{
