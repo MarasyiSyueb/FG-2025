@@ -1,0 +1,203 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100vh;
+      width: 100vw;
+      background-image: url(images/backgroundimg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .box1 {
+      width: 60vw;
+      height: 100vh;
+      background-color: #008787;
+      background-image: url(images/backgr4k.png);
+      background-position: center;
+      background-size: cover;
+      border-top-right-radius: 500px;
+      border-bottom-right-radius: 500px;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .box1 img{
+      width: 40%;
+    }
+
+    .box2 {
+      width: 50vw;
+      height: 100vh;
+      position: absolute;
+      left: 50vw; /* Starts where box1 visually ends (60vw - 10vw overlap) */
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .box3 {
+      position: fixed;
+      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .box3.show {
+      transform: scale(1);
+      opacity: 0.5;
+      pointer-events: auto;
+    }
+
+    .topsec {
+      width: 100vw;
+      height: 5vh;
+    }
+    .botsec {
+      width: 100vw;
+      height: 95vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .box-timer {
+      background-color: white;
+      opacity: 0.8;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      text-align: center;
+      font-family: sans-serif;
+      margin-top: 25px;
+    }
+    .box2 img{
+        width: 40%;
+        display: none;
+    }
+    .buttons {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .buttons button{
+        width: 9vw;
+        height: 6vh;
+        border-radius: 15px;
+        border: none;
+        background-color: #008787;
+        color: white;
+        cursor: pointer;
+        font-family: 'Caveat Brush', sans-serif;
+        transition: all 0.2s ease;
+        font-size: 1vw;
+    }
+    .buttons button:hover{
+        background-color: #00a2a2;
+    }
+    .buttons button:active{
+        transform: scale(1);
+    }
+    .exitbtn{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 97%;
+    }
+    .exitbtn:hover{
+      cursor: pointer;
+      opacity: 80%;
+    }
+    .botsecinput{
+      width: 40vw;
+      height: 100vh;
+      background-color: red;
+    }
+
+    @media (orientation:portrait) {
+        
+        .box1{
+            border-top-left-radius: 400px;
+            border-top-right-radius: 400px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            width: 100vw;
+            height: 55vh;
+            justify-content: start;
+            top: 50vw;
+        }
+        .box1 img{
+            margin-top: 160px;
+            width: 60vw;
+            display: none;
+        }
+        .buttons{
+          flex-direction: column;
+          margin-top: 130px;
+          gap: 2vh;
+        }
+        .buttons button{
+          width: 25vw;
+          height: 6vh;
+          font-size: 40px;
+          
+        }
+        .box2{
+            width: 100vw;
+            height: 45vh;
+            top: 10vw;
+            left: 0vw;
+        }
+        .box2 img{
+            display: block;
+            width: 65vw;
+        }
+        .box3 {
+          z-index: 10;
+        }
+        .exitbtn{
+          width: 70px;
+          height: 70px;
+          left: 0vw;
+        }
+        .box-timer{
+          margin-top: 4vh;
+          width: 80vw;
+          height: auto;
+          font-size: 38px;
+        }
+        .botsecinput{
+          width: 100vw;
+          height: 100vh;
+        }
+    }
+
+    

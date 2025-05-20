@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Family Gathering Ikhwan Akhwat Tegal 2025</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1">
+                <img src="images/Logo2.png">
+                <div class="buttons">
+                    <button id="abtbtn">Tentang Acara</button>
+                    <button id="dftbtn">Daftar Disini</button>
+                </div>
+                <div class="box-timer" id="countdown">
+                    <span id="days">0</span> Hari 
+                    <span id="hours">00</span> Jam 
+                    <span id="minutes">00</span> Menit
+                    <span id="seconds">00</span> Detik
+                </div>
+            </div>
+            <div class="box2">
+                <img src="images/Logo2.png">
+            </div>
+            <div class="box3" id="abtbox">
+                <div class="topsec">
+                    <img src="images/ex.png" id="extbtn" class="exitbtn">
+                </div>
+                <div class="botsec">
+                    <div class="botsecinput">
+                        <h1>Tentang Acara</h1>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quidem animi sapiente! Fugit, eveniet voluptate earum voluptatem tenetur dolor labore deleniti necessitatibus impedit, neque non! Consequuntur laboriosam dolores possimus aliquam.</h3>
+                        <img src="images/" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    const aboutBtn = document.getElementById("abtbtn");
+    const aboutBox = document.getElementById("abtbox");
+    const exitBtn = document.getElementById("extbtn");
+
+    aboutBtn.addEventListener("click", () => {
+       aboutBox.classList.toggle('show');
+    });
+
+    exitBtn.addEventListener("click", () => {
+        aboutBox.classList.remove('show');
+    });
+</script>
+<script>
+    const targetDate = new Date("2025-06-01T08:30:00").getTime();
+    const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance<0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").textContent = "Countdown Complete!";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }, 1000);
+</script>
