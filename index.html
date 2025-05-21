@@ -41,6 +41,16 @@
                     </div>
                 </div>
             </div>
+            <div id="donatebox" class="box4">
+                <div id="donatedtl" class="box4a">
+                    <div class="donateTop">
+                        <img src="images/ex.png" class="donateExit" id="donateExBtn">
+                    </div>
+                    <div class="donateBot">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
@@ -49,6 +59,9 @@
     const aboutBtn = document.getElementById("abtbtn");
     const aboutBox = document.getElementById("abtbox");
     const exitBtn = document.getElementById("extbtn");
+    const donateBtn = document.getElementById("donatebtn");
+    const donateBox = document.getElementById("donatedtl");
+    const donateExtBtn = document.getElementById("donateExBtn");
 
     aboutBtn.addEventListener("click", () => {
        aboutBox.classList.toggle('show');
@@ -57,6 +70,13 @@
     exitBtn.addEventListener("click", () => {
         aboutBox.classList.remove('show');
     });
+
+    donateBtn.addEventListener("click", () => {
+        donateBox.classList.toggle('muncul');
+    });
+    donateExtBtn.addEventListener("click", () => {
+        donateBox.classList.remove('muncul');
+    })
 </script>
 <script>
     const targetDate = new Date("2025-06-01T08:30:00").getTime();
