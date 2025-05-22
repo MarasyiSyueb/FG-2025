@@ -285,14 +285,14 @@
           height: 100vh;
         }
         .botsecinput h1{
-          font-size: 5vw;
+          font-size: 10vw;
           text-align: center;
         }
         .botsecinput h3{
           margin-top: 5vh;
           margin-left: 2vw;
           margin-right: 2vw;
-          font-size: 4vw;
+          font-size: 5vw;
           text-align: center;
         }
         .donatebox {
@@ -328,4 +328,4 @@
           text-align: center;
     }
 
-    
+  } 
