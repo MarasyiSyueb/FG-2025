@@ -192,8 +192,10 @@
       font-size: 2vw;
       text-align: center;
     }
-    .betsecinput h3{
+    .botsecinput h3{
+      margin: 2vh;
       font-size: 1vw;
+      text-align: center;
     }
     .donatebox{
       margin-top: 20px;
@@ -297,7 +299,7 @@
           text-align: center;
         }
         .botsecinput h3{
-          font-size: 5vw;
+          font-size: 3.5vw;
           text-align: center;
         }
         .donatebox {
