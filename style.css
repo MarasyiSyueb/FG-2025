@@ -280,10 +280,17 @@
           height: auto;
           font-size: 5vw;
         }
+        .topsec{
+          width: 100vw;
+          height: 10vh;
+        }
+        .botsec{
+          width: 100vw;
+          height: 90vh;
+        }
         .botsecinput{
           width: 100vw;
-          height: 100vh;
-          background-color: red;
+          height: 90vh;
         }
         .botsecinput h1{
           font-size: 10vw;
@@ -320,6 +327,7 @@
         }
         .donateBot h1 {
           font-size: 10vw;
+          text-align: center;
         }
         .donateBot h3 {
           font-size: 5vw;
