@@ -130,6 +130,7 @@
     .donateBot h3{
       margin-left: 2vw;
       margin-right: 2vw;
+      text-align: center;
     }
     .box-timer {
       color: white;
@@ -187,6 +188,10 @@
     .botsecinput{
       width: 40vw;
       height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .botsecinput h1{
       font-size: 2vw;
@@ -196,6 +201,11 @@
       margin: 2vh;
       font-size: 1vw;
       text-align: center;
+    }
+    .botsecinput img{
+      width: 9vw;
+      height: 24vh;
+      align-items: center;
     }
     .donatebox{
       margin-top: 20px;
@@ -302,6 +312,10 @@
           font-size: 3.5vw;
           text-align: center;
         }
+        .botsecinput img{
+          width: 40vw;
+          height: 30vh;
+        }
         .donatebox {
           margin-top: 3vh;
         }
@@ -323,6 +337,7 @@
           height: 70px;
         }
         .donateBot {
+          margin-top: 20vh;
           align-items: center;
           width: 100vw;
           height: 90vh;
